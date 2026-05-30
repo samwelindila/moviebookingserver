@@ -8,7 +8,6 @@ const getToken = async () => {
         })
     });
     const data = await res.json();
-    console.log('Token response:', data);
     return data.token;
 };
 
@@ -27,7 +26,8 @@ const run = async () => {
         })
     });
     const data = await res.json();
-    console.log('IPN response:', data);
+    console.log('IPN ID:', data.ipn_id);
+    console.log('Full response:', JSON.stringify(data, null, 2));
 };
 
 run();
